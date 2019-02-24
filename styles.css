@@ -10,3 +10,7 @@ a {
     color: darkblue;
 }
 
+.wrapper {
+    display: flex;
+    text-align: center;
+}

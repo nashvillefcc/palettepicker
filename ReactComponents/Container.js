@@ -25,12 +25,12 @@ class Container extends React.Component {
 
   render() {
     return (
-      <div id="panes">
+      <Wrapper>
         <PreviewPane />
         <ElementSelectPane />
-      </div>
+      </Wrapper>
     );
   }
 }
 
-ReactDOM.render(Container, document.getElementById("pane-container"));
+ReactDOM.render(<Container />, document.getElementById("pane-container"));

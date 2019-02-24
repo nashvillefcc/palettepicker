@@ -1,6 +1,6 @@
 "use strict";
 
-class ElementSelect extends React.Component {
+class ElementSelectPane extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
