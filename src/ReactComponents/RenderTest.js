@@ -11,4 +11,4 @@ class RenderTest extends React.Component {
   }
 }
 
-ReactDOM.render(<RenderTest name="Tyler"/>, document.getElementById("render-test"));
+ReactDOM.render(<RenderTest />, document.getElementById("render-test"));

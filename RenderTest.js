@@ -35,4 +35,4 @@ var RenderTest = function (_React$Component) {
   return RenderTest;
 }(React.Component);
 
-ReactDOM.render(React.createElement(RenderTest, { name: "Tyler" }), document.getElementById("render-test"));
+ReactDOM.render(React.createElement(RenderTest, null), document.getElementById("render-test"));
