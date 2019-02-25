@@ -17,8 +17,3 @@ class ColorSelectButton extends React.Component {
     );
   }
 }
-
-ReactDOM.render(
-  <ColorSelectButton color="red" />,
-  document.getElementById("color-button")
-);

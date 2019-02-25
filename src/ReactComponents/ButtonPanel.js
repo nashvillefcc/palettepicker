@@ -1,5 +1,7 @@
 "use strict";
 
+import { ColorSelectButton } from './ColorSelectButton.js'
+
 class ButtonPanel extends React.Component {
   constructor(props) {
     super(props);
@@ -34,3 +36,12 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+
+const testButtons = [
+  {color: 'red'},
+  {color: 'blue'},
+  {color: 'green'}
+]
+
+ReactDOM.render(<ButtonPanel buttons={testButtons} />, document.getElementById('button-panel'));
+
