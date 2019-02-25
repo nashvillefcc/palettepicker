@@ -26,12 +26,13 @@
       <div class="card-header">Pick your palette!</div>
       <div class="card-body">
         <h5 class="card-title">Choose your colors</h5>
-        <div id="color-picker"></div>
-        <div id="pane-container"></div>
       </div>
+      <div id="color-button"></div>
       <div class="card-footer">
         Card footer. Save button here maybe?
-        <a href="#" class="btn btn-primary">This doesn't do anything (yet)</a>
+        <div>
+          <a href="#" class="btn btn-primary">This doesn't do anything (yet)</a>
+        </div>
       </div>
     </div>
   </div>
@@ -43,4 +44,9 @@
     src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
     crossorigin
   ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@dpwolfe/react-color@1.3.4-1/lib/index.min.js"
+    crossorigin
+  ></script>
+  <script src="./ReactComponents/ColorButton.js"></script>
 </body>
