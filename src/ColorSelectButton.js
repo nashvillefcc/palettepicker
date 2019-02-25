@@ -1,10 +1,8 @@
-"use strict";
-
 class ColorSelectButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: this.props.color
+      color: this.props.color || 'black'
     };
   }
 
@@ -17,3 +15,5 @@ class ColorSelectButton extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<ColorSelectButton color='red' />, document.getElementById('color-button') )
