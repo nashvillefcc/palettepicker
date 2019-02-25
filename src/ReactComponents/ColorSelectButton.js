@@ -8,14 +8,9 @@ class ColorSelectButton extends React.Component {
     };
   }
 
-  handleClick = () => {
-    //open color selection
-  };
-
   render() {
     return (
       <button
-        onClick={this.handleClick}
         className="colorButton"
         style={{ background: this.state.color }}
       />
