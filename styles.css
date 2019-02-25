@@ -10,7 +10,7 @@ a {
     color: darkblue;
 }
 
-.wrapper {
-    display: flex;
-    text-align: center;
+.colorButton {
+    width: 40px;
+    height: 25px;
 }

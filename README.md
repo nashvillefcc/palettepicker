@@ -6,3 +6,4 @@ This is a project built by members of the [freeCodeCamp Nashville Meetup group](
 
 To run this project, make sure you have installed `node` and `babel` and run the following in the terminal:
 > `npx babel --watch src/ReactComponents --out-dir . --presets react-app/prod`
+This will start an automated watcher for JSX. 
