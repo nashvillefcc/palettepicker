@@ -5,6 +5,13 @@ This tool is a page that shows a generic/example web page in a preview window an
 This is a project built by members of the [freeCodeCamp Nashville Meetup group](https://www.meetup.com/freeCodeCamp-Nashville/)
 
 To run this project, make sure you have installed `node` and run the following in the terminal:
+
+> `npm install`
+
+Once the packages have finished installing, run 
+
 > `npm start`
+
+from the root directory.
 
 This will start the app. 

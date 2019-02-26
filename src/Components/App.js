@@ -4,7 +4,7 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return <div>Rendering from App component</div>;
+    return <div>Rendering from src/Components/App.js</div>;
   }
 }
 
