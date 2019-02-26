@@ -9,10 +9,14 @@ class App extends Component {
   }
 }
 
+// this test button array is for... well, testing purposes only
 const testButtons = [
   {color: 'red'},
+  {color: 'gray'},
+  {color: 'green'},
   {color: 'blue'},
-  {color: 'green'}
+  {color: 'orange'},
+  {color: 'lightblue'}
 ]
 
 export default App;
