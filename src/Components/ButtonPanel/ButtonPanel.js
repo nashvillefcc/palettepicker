@@ -21,8 +21,14 @@ class ButtonPanel extends React.Component {
   };
 
   render() {
-    return this.state.buttons.map(b => {
-      return <ColorButton color={b.color} onClick={this.handleClick} />;
-    });
+    return (
+      <div>
+        {this.state.buttons.map(b => {
+          return <ColorButton color={b.color} onClick={this.handleClick} />;
+        })}
+      </div>
+    );
   }
 }
+
+export default ButtonPanel;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./ColorButton.css";
 
 class ColorButton extends React.Component {
   constructor(props) {
@@ -8,7 +7,7 @@ class ColorButton extends React.Component {
   }
 
   render(){
-    return <button style={{background: this.state.color}} />
+    return <button style={{background: this.state.color, width: "100px", height: "100px"}} />
   }
 }
 
