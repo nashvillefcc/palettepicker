@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
-import PreviewPane from "../PreviewPane/PreviewPane.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
@@ -39,8 +38,9 @@ class Container extends React.Component {
     return (
       <div>
         <ButtonPanel />
-        <PreviewPane>
-          <Navbar navbarBg={navbarBg} navbarText={navbarText} />
+
+        <Navbar navbarBg={navbarBg} navbarText={navbarText} />
+        <span>
           <Sidebar
             link={link}
             visitedLink={visitedLink}
@@ -48,7 +48,7 @@ class Container extends React.Component {
             sidebarBg={sidebarBg}
           />
           <MainContent mainBg={mainBg} mainText={mainText} />
-        </PreviewPane>
+        </span>
       </div>
     );
   }

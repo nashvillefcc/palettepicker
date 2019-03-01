@@ -6,21 +6,66 @@ const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
   return (
     <div className="Sidebar" style={{ backgroundColor: sidebarBg }}>
       <p style={{ color: sidebarText }}>Check out these links</p>
-      <button style={{ color: visitedLink, background: "none", border: "none" }}>
-        Visited Link
-      </button>
-      <button style={{ color: link, background: "none", border: "none" }}>
-        Link 1
-      </button>
-      <button style={{ color: link, background: "none", border: "none" }}>
-        Link 2
-      </button>
-      <button style={{ color: link, background: "none", border: "none" }}>
-        Link 3
-      </button>
-      <button style={{ color: link, background: "none", border: "none" }}>
-        Link 4
-      </button>
+      <div>
+        <button
+          style={{
+            color: visitedLink,
+            background: "none",
+            border: "none",
+            margin: "5px"
+          }}
+        >
+          Visited Link
+        </button>
+      </div>
+      <div>
+        <button
+          style={{
+            color: link,
+            background: "none",
+            border: "none",
+            margin: "5px"
+          }}
+        >
+          Link 1
+        </button>
+      </div>
+      <div>
+        <button
+          style={{
+            color: link,
+            background: "none",
+            border: "none",
+            margin: "5px"
+          }}
+        >
+          Link 2
+        </button>
+      </div>
+      <div>
+        <button
+          style={{
+            color: link,
+            background: "none",
+            border: "none",
+            margin: "5px"
+          }}
+        >
+          Link 3
+        </button>
+      </div>
+      <div>
+        <button
+          style={{
+            color: link,
+            background: "none",
+            border: "none",
+            margin: "5px"
+          }}
+        >
+          Link 4
+        </button>
+      </div>
     </div>
   );
 };
