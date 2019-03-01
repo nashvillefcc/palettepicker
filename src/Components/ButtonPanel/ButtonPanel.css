@@ -1,5 +1,4 @@
-.ButtonPanel{
-  width: 80%;
-  height: 20%;
+.ButtonPanel {
   text-align: center;
+  background-color: black;
 }

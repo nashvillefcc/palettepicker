@@ -1,14 +1,20 @@
 import React from "react";
+import PropTypes from "prop-types";
+import "./ColorButton.css";
 
-class ColorButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { color: this.props.color };
-  }
+const ColorButton = ({ color }) => {
+  return (
+    <button
+      className="ColorButton"
+      style={{
+        background: color
+      }}
+    />
+  );
+};
 
-  render(){
-    return <button style={{background: this.state.color, width: "100px", height: "100px"}} />
-  }
-}
+ColorButton.propTypes = {
+  color: PropTypes.string.isRequired
+};
 
 export default ColorButton;

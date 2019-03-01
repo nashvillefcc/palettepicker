@@ -1,0 +1,7 @@
+.Navbar {
+  text-align: center;
+}
+.Navbar-text:hover {
+  /* do something cool? */
+  margin: 10px;
+}
