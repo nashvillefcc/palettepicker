@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./MainContent.css";
 
 const MainContent = ({ mainContentBg, mainContentText }) => {
@@ -26,9 +25,9 @@ const MainContent = ({ mainContentBg, mainContentText }) => {
   );
 };
 
-MainContent.propTypes = {
-  mainContentBg: PropTypes.string.isRequired,
-  mainContentText: PropTypes.string.isRequired
+MainContent.defaultProps = {
+  mainContentBg: '#fff',
+  mainContentText: '#000'
 };
 
 export default MainContent;

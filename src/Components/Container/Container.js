@@ -3,25 +3,29 @@ import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
+import ColorButton from "../ColorButton/ColorButton.js";
 
 class Container extends React.Component {
-  state = {
-    // Managing state from this top-level container seems like
-    // the easiest way to have the color buttons communicate
-    // with their respective elements in the preview pane
-    mainBg: "#FFFFFF",
-    mainText: "#000000",
-    navbarBg: "#909497",
-    navbarText: "#000000",
-    sidebarBg: "#D5D8DC",
-    sidebarText: "#000000",
-    link: "#0032FF",
-    visitedLink: "#B000F7",
-    displayColorPicker: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Managing state from this top-level container seems like
+      // the easiest way to have the color buttons communicate
+      // with their respective elements in the preview pane
+      mainBg: "#fff",
+      mainText: "#000000",
+      navbarBg: "#909497",
+      navbarText: "#000000",
+      sidebarBg: "#D5D8DC",
+      sidebarText: "#000000",
+      link: "#0032FF",
+      visitedLink: "#B000F7",
+      displayColorPicker: false
+    };
+  }
 
-  toggleColorPicker = () => {
-    this.setState({ displayColorPicker: !this.state.displayColorPicker });
+  parentHandler = color => {
+    this.setState({ mainBg: color });
   };
 
   render() {
@@ -37,7 +41,9 @@ class Container extends React.Component {
     } = this.state;
     return (
       <div>
-        <ButtonPanel/>
+        <span>
+          <ColorButton color={mainBg} updateParent={this.parentHandler} />
+        </span>
         <Navbar navbarBg={navbarBg} navbarText={navbarText} />
         <span>
           <Sidebar
@@ -46,7 +52,8 @@ class Container extends React.Component {
             sidebarText={sidebarText}
             sidebarBg={sidebarBg}
           />
-          <MainContent mainBg={mainBg} mainText={mainText} />
+          <MainContent mainContentBg={mainBg} mainContentText={mainText} />
+          <p>Background Color is {mainBg}</p>
         </span>
       </div>
     );

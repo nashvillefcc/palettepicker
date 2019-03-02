@@ -2,7 +2,7 @@ import React from "react";
 import reactCSS from "reactcss";
 import { SketchPicker } from "react-color";
 
-class ColorButton extends React.Component {
+class SketchButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -72,4 +72,4 @@ class ColorButton extends React.Component {
   }
 }
 
-export default ColorButton;
+export default SketchButton;
