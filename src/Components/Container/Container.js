@@ -37,8 +37,7 @@ class Container extends React.Component {
     } = this.state;
     return (
       <div>
-        <ButtonPanel />
-
+        <ButtonPanel/>
         <Navbar navbarBg={navbarBg} navbarText={navbarText} />
         <span>
           <Sidebar
