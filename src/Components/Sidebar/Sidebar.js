@@ -4,7 +4,7 @@ import "./Sidebar.css";
 
 const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
   return (
-    <div className="Sidebar" style={{ backgroundColor: sidebarBg }}>
+    <nav className="Sidebar" style={{ backgroundColor: sidebarBg }}>
       <p style={{ color: sidebarText }}>Check out these links</p>
       <div>
         <button
@@ -66,7 +66,7 @@ const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
           Link 4
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

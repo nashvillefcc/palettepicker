@@ -1,7 +1,8 @@
 .Navbar {
   text-align: center;
+  width: 100%;
 }
-.Navbar-text:hover {
-  /* do something cool? */
+.Navbar-text {
   margin: 10px;
+  vertical-align: middle;
 }

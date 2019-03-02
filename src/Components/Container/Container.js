@@ -24,8 +24,8 @@ class Container extends React.Component {
     };
   }
 
-  parentHandler = color => {
-    this.setState({ mainBg: color });
+  parentHandler = (color, propKey) => {
+    this.setState({ [propKey]: color });
   };
 
   render() {
@@ -41,11 +41,36 @@ class Container extends React.Component {
     } = this.state;
     return (
       <div>
-        <span>
-          <ColorButton color={mainBg} updateParent={this.parentHandler} />
-        </span>
-        <Navbar navbarBg={navbarBg} navbarText={navbarText} />
-        <span>
+        <ButtonPanel
+          buttons={[
+            <ColorButton
+              key="mainBgButton"
+              color={mainBg}
+              propKey="mainBg"
+              updateParent={this.parentHandler}
+            />,
+            <ColorButton
+              key="mainTextButton"
+              color={mainText}
+              propKey="mainText"
+              updateParent={this.parentHandler}
+            />,
+            <ColorButton
+              key="navbarBgButton"
+              color={navbarBg}
+              propKey="navbarBg"
+              updateParent={this.parentHandler}
+            />,
+            <ColorButton
+              key="navbarTextButton"
+              color={navbarText}
+              propKey="navbarText"
+              updateParent={this.parentHandler}
+            />
+          ]}
+        />
+        <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
+        <section style={{ display: "flex" }}>
           <Sidebar
             link={link}
             visitedLink={visitedLink}
@@ -53,8 +78,8 @@ class Container extends React.Component {
             sidebarBg={sidebarBg}
           />
           <MainContent mainContentBg={mainBg} mainContentText={mainText} />
-          <p>Background Color is {mainBg}</p>
-        </span>
+        </section>
+        <p style={{ textAlign: "center" }}>Background Color is {mainBg}</p>
       </div>
     );
   }

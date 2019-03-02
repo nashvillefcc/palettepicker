@@ -19,7 +19,7 @@ class ColorButton extends React.Component {
   };
 
   handleChange = color => {
-    this.props.updateParent(color.hex)
+    this.props.updateParent(color.hex, this.props.propKey)
   };
 
   render() {
@@ -54,7 +54,7 @@ class ColorButton extends React.Component {
     });
 
     return (
-      <div>
+      <span>
         <div style={styles.swatch} onClick={this.handleClick}>
           <div style={styles.color} />
         </div>
@@ -67,7 +67,7 @@ class ColorButton extends React.Component {
             />
           </div>
         ) : null}
-      </div>
+      </span>
     );
   }
 }

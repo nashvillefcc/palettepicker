@@ -2,22 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Navbar.css";
 
-const Navbar = ({ navbarBg, navbarText }) => {
+const Navbar = ({ navbarContentBg, navbarContentText }) => {
   return (
-    <span className="Navbar" style={{ backgroundColor: navbarBg }}>
-      <h5 className="Navbar-text" style={{ color: navbarText }}>
+    <div className="Navbar" style={{ backgroundColor: navbarContentBg }}>
+      <span className="Navbar-text" style={{ color: navbarContentText }}>
         Home
-      </h5>
-      <h5 className="Navbar-text" style={{ color: navbarText }}>
-        About
-      </h5>
-      <h5 className="Navbar-text" style={{ color: navbarText }}>
-        Privacy
-      </h5>
-      <h5 className="Navbar-text" style={{ color: navbarText }}>
-        Contact Us
-      </h5>
-    </span>
+      </span>
+      <span className="Navbar-text" style={{ color: navbarContentText }}>
+        About{" "}
+      </span>
+      <span className="Navbar-text" style={{ color: navbarContentText }}>
+        {" "}
+        Privacy{" "}
+      </span>
+      <span className="Navbar-text" style={{ color: navbarContentText }}>
+        {" "}
+        Contact Us{" "}
+      </span>
+    </div>
   );
 };
 
@@ -27,7 +29,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  navbarBg: "#909497",
+  navbarBg: "#c50e0e",
   navbarText: "#000000"
 };
 
