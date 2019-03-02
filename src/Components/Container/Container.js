@@ -25,6 +25,7 @@ class Container extends React.Component {
   }
 
   parentHandler = (color, propKey) => {
+    // passing in the propKey lets us dynamically access which color we want to change in state
     this.setState({ [propKey]: color });
   };
 
@@ -41,13 +42,13 @@ class Container extends React.Component {
     } = this.state;
     return (
       <div>
-        <ButtonPanel
-          buttons={[
-            <ColorButton
-              key="mainBgButton"
-              color={mainBg}
-              propKey="mainBg"
-              updateParent={this.parentHandler}
+        <ButtonPanel                            // ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row
+          buttons={[                            // buttons is an array of ColorButtons for each element that a user can modify
+            <ColorButton                        // ColorButton is a component that handles displaying the color selection popover and handles color change
+              key="mainBgButton"                // each ColorButton in this array gets mapped over, so it needs a key identifier
+              color={mainBg}                    // the color we are changing is passed as props to the ColorButton
+              propKey="mainBg"                  // this tells the updateParent method which key in state is getting its color updated
+              updateParent={this.parentHandler} // this is the handler function that sets the state in this parent Container component
             />,
             <ColorButton
               key="mainTextButton"
