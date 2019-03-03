@@ -41,6 +41,7 @@ class ColorButton extends React.Component {
         },
         popover: {
           position: "absolute",
+          left: "30%",
           zIndex: "2"
         },
         cover: {

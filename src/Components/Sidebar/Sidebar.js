@@ -66,6 +66,15 @@ const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
           Link 4
         </button>
       </div>
+      <p style={{margin: "50px"}}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus urna
+        massa, ultrices vitae risus sed, sodales auctor ex. Nulla fermentum
+        condimentum nunc, vel dictum urna maximus vel. Duis et fringilla tellus.
+        Sed faucibus lacinia libero, quis euismod elit pretium vel. Phasellus
+        sed leo id sapien tincidunt sollicitudin id et magna. Nullam iaculis
+        augue quis est vehicula pellentesque et eget elit. Phasellus vestibulum
+        felis sed dictum porttitor.
+      </p>
     </nav>
   );
 };
