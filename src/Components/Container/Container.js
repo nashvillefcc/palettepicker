@@ -41,61 +41,100 @@ class Container extends React.Component {
       link,
       visitedLink
     } = this.state;
+    const colorButtons = [
+      {
+        Label: "Main background",
+        Component: (
+          <ColorButton // ColorButton is a component that handles displaying the color selection popover and handles color change
+            key="mainBgButton" // each ColorButton in this array gets mapped over, so it needs a key identifier
+            color={mainBg} // the color we are changing is passed as props to the ColorButton
+            propKey="mainBg" // this tells the updateParent method which key in state is getting its color updated
+            updateParent={this.parentHandler} // this is the handler function that sets the state in this parent Container component
+          />
+        )
+      },
+      {
+        Label: "Main text",
+        Component: (
+          <ColorButton
+            key="mainTextButton"
+            color={mainText}
+            propKey="mainText"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Navbar background",
+        Component: (
+          <ColorButton
+            key="navbarBgButton"
+            color={navbarBg}
+            propKey="navbarBg"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Navbar text",
+        Component: (
+          <ColorButton
+            key="navbarTextButton"
+            color={navbarText}
+            propKey="navbarText"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Sidebar background",
+        Component: (
+          <ColorButton
+            key="sidebarBgButton"
+            color={sidebarBg}
+            propKey="sidebarBg"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Sidebar text",
+        Component: (
+          <ColorButton
+            key="sidebarTextButton"
+            color={sidebarText}
+            propKey="sidebarText"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Links",
+        Component: (
+          <ColorButton
+            key="linkButton"
+            color={link}
+            propKey="link"
+            updateParent={this.parentHandler}
+          />
+        )
+      },
+      {
+        Label: "Visited links",
+        Component: (
+          <ColorButton
+            key="visitedLinkButton"
+            color={visitedLink}
+            propKey="visitedLink"
+            updateParent={this.parentHandler}
+          />
+        )
+      }
+    ];
     return (
       <div>
-        <ButtonPanel // ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row
-          buttons={[
-            // buttons is an array of ColorButtons for each element that a user can modify
-            <ColorButton // ColorButton is a component that handles displaying the color selection popover and handles color change
-              key="mainBgButton" // each ColorButton in this array gets mapped over, so it needs a key identifier
-              color={mainBg} // the color we are changing is passed as props to the ColorButton
-              propKey="mainBg" // this tells the updateParent method which key in state is getting its color updated
-              updateParent={this.parentHandler} // this is the handler function that sets the state in this parent Container component
-            />,
-            <ColorButton
-              key="mainTextButton"
-              color={mainText}
-              propKey="mainText"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="navbarBgButton"
-              color={navbarBg}
-              propKey="navbarBg"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="navbarTextButton"
-              color={navbarText}
-              propKey="navbarText"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="sidebarBgButton"
-              color={sidebarBg}
-              propKey="sidebarBg"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="sidebarTextButton"
-              color={sidebarText}
-              propKey="sidebarText"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="linkButton"
-              color={link}
-              propKey="link"
-              updateParent={this.parentHandler}
-            />,
-            <ColorButton
-              key="visitedLinkButton"
-              color={visitedLink}
-              propKey="visitedLink"
-              updateParent={this.parentHandler}
-            />
-          ]}
-        />
+        {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
+        <ButtonPanel buttons={colorButtons} />
         <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
         <section style={{ display: "flex" }}>
           <Sidebar
