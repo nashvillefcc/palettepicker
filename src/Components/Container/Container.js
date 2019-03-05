@@ -132,19 +132,23 @@ class Container extends React.Component {
       }
     ];
     return (
-      <div>
+      <div className="Container">
+        <h2>Color Selection buttons</h2>
         {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
         <ButtonPanel buttons={colorButtons} />
-        <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
-        <section style={{ display: "flex" }}>
-          <Sidebar
-            link={link}
-            visitedLink={visitedLink}
-            sidebarText={sidebarText}
-            sidebarBg={sidebarBg}
-          />
-          <MainContent mainContentBg={mainBg} mainContentText={mainText} />
-        </section>
+        <h2>Real-Time Preview</h2>
+        <div className="preview-window">
+          <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
+          <section>
+            <Sidebar
+              link={link}
+              visitedLink={visitedLink}
+              sidebarText={sidebarText}
+              sidebarBg={sidebarBg}
+            />
+            <MainContent mainContentBg={mainBg} mainContentText={mainText} />
+          </section>
+        </div>
         <div style={{ textAlign: "center" }}>
           <h2>Hex Color Codes</h2>
           <table>

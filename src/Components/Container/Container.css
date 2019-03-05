@@ -1,3 +1,31 @@
+.ButtonPanel {
+  border: 2px solid black;
+  width: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.preview-window {
+  margin: 20px;
+  border: 2px solid black;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Navbar {
+  text-align: center;
+  width: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  width: auto;
+}
+
 table {
   display: inline-block;
   text-align: center;
@@ -7,7 +35,8 @@ table {
   border: 1px solid black;
 }
 
-th,td {
+th,
+td {
   width: 100%;
   border: 1px solid black;
 }
