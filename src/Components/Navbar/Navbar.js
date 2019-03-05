@@ -4,22 +4,20 @@ import "./Navbar.css";
 
 const Navbar = ({ navbarContentBg, navbarContentText }) => {
   return (
-    <div className="Navbar" style={{ backgroundColor: navbarContentBg }}>
+    <nav className="Navbar" style={{ backgroundColor: navbarContentBg }}>
       <span className="Navbar-text" style={{ color: navbarContentText }}>
         Home
       </span>
       <span className="Navbar-text" style={{ color: navbarContentText }}>
-        About{" "}
+        About
       </span>
       <span className="Navbar-text" style={{ color: navbarContentText }}>
-        {" "}
-        Privacy{" "}
+        Privacy
       </span>
       <span className="Navbar-text" style={{ color: navbarContentText }}>
-        {" "}
-        Contact Us{" "}
+        Contact Us
       </span>
-    </div>
+    </nav>
   );
 };
 

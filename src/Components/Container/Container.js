@@ -149,7 +149,7 @@ class Container extends React.Component {
             <MainContent mainContentBg={mainBg} mainContentText={mainText} />
           </section>
         </div>
-        <div style={{ textAlign: "center" }}>
+        <div className="color-code-table">
           <h2>Hex Color Codes</h2>
           <table>
             <tr>
