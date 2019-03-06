@@ -45,59 +45,53 @@ class Container extends React.Component {
         label: "Main background", // each ColorButton has a corresponding label to be displayed in the Button panel
         key: "mainBgButton", // each ColorButton in this array gets mapped over, so it needs a key identifier
         color: mainBg, // the color we are changing is passed as props to the ColorButton
-        propKey: "mainBg", // this tells the updateParent method which key in state is getting its color updated
-        updateParent: this.parentHandler // this is the handler function that sets the state in this parent Container component
+        propKey: "mainBg", // this tells the updateParent method which key in state is getting its color updated // this is the handler function that sets the state in this parent Container component
       },
       {
         label: "Main text",
         key: "mainTextButton",
         color: mainText,
         propKey: "mainText",
-        updateParent: this.parentHandler
       },
       {
         label: "Navbar background",
         key: "navbarBgButton",
         color: navbarBg,
         propKey: "navbarBg",
-        updateParent: this.parentHandler
       },
       {
         label: "Navbar text",
         key: "navbarTextButton",
         color: navbarText,
         propKey: "navbarText",
-        updateParent: this.parentHandler
       },
       {
         label: "Sidebar background",
         key: "sidebarBgButton",
         color: sidebarBg,
         propKey: "sidebarBg",
-        updateParent: this.parentHandler
       },
       {
         label: "Sidebar text",
         key: "sidebarTextButton",
         color: sidebarText,
         propKey: "sidebarText",
-        updateParent: this.parentHandler
       },
       {
         label: "Links",
         key: "linkButton",
         color: link,
         propKey: "link",
-        updateParent: this.parentHandler
       },
       {
         label: "Visited links",
         key: "visitedLinkButton",
         color: visitedLink,
         propKey: "visitedLink",
-        updateParent: this.parentHandler
       }
     ];
+    // give the parentHandler method to all buttons before they are passed into ButtonPanel
+    colorButtons.map(b=>b.updateParent = this.parentHandler)
     return (
       <div className="Container">
         <h2>Color Selection buttons</h2>
