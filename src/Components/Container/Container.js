@@ -3,7 +3,6 @@ import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
-import ColorButton from "../ColorButton/ColorButton.js";
 import "./Container.css";
 
 class Container extends React.Component {
@@ -43,92 +42,60 @@ class Container extends React.Component {
     } = this.state;
     const colorButtons = [
       {
-        Label: "Main background",
-        Component: (
-          <ColorButton // ColorButton is a component that handles displaying the color selection popover and handles color change
-            key="mainBgButton" // each ColorButton in this array gets mapped over, so it needs a key identifier
-            color={mainBg} // the color we are changing is passed as props to the ColorButton
-            propKey="mainBg" // this tells the updateParent method which key in state is getting its color updated
-            updateParent={this.parentHandler} // this is the handler function that sets the state in this parent Container component
-          />
-        )
+        label: "Main background", // each ColorButton has a corresponding label to be displayed in the Button panel
+        key: "mainBgButton", // each ColorButton in this array gets mapped over, so it needs a key identifier
+        color: mainBg, // the color we are changing is passed as props to the ColorButton
+        propKey: "mainBg", // this tells the updateParent method which key in state is getting its color updated
+        updateParent: this.parentHandler // this is the handler function that sets the state in this parent Container component
       },
       {
-        Label: "Main text",
-        Component: (
-          <ColorButton
-            key="mainTextButton"
-            color={mainText}
-            propKey="mainText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Main text",
+        key: "mainTextButton",
+        color: mainText,
+        propKey: "mainText",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Navbar background",
-        Component: (
-          <ColorButton
-            key="navbarBgButton"
-            color={navbarBg}
-            propKey="navbarBg"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Navbar background",
+        key: "navbarBgButton",
+        color: navbarBg,
+        propKey: "navbarBg",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Navbar text",
-        Component: (
-          <ColorButton
-            key="navbarTextButton"
-            color={navbarText}
-            propKey="navbarText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Navbar text",
+        key: "navbarTextButton",
+        color: navbarText,
+        propKey: "navbarText",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Sidebar background",
-        Component: (
-          <ColorButton
-            key="sidebarBgButton"
-            color={sidebarBg}
-            propKey="sidebarBg"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Sidebar background",
+        key: "sidebarBgButton",
+        color: sidebarBg,
+        propKey: "sidebarBg",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Sidebar text",
-        Component: (
-          <ColorButton
-            key="sidebarTextButton"
-            color={sidebarText}
-            propKey="sidebarText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Sidebar text",
+        key: "sidebarTextButton",
+        color: sidebarText,
+        propKey: "sidebarText",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Links",
-        Component: (
-          <ColorButton
-            key="linkButton"
-            color={link}
-            propKey="link"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Links",
+        key: "linkButton",
+        color: link,
+        propKey: "link",
+        updateParent: this.parentHandler
       },
       {
-        Label: "Visited links",
-        Component: (
-          <ColorButton
-            key="visitedLinkButton"
-            color={visitedLink}
-            propKey="visitedLink"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Visited links",
+        key: "visitedLinkButton",
+        color: visitedLink,
+        propKey: "visitedLink",
+        updateParent: this.parentHandler
       }
     ];
     return (
@@ -195,4 +162,7 @@ class Container extends React.Component {
   }
 }
 
+
+
 export default Container;
+
