@@ -19,8 +19,7 @@ class Container extends React.Component {
       sidebarBg: "#D5D8DC",
       sidebarText: "#000000",
       link: "#0032FF",
-      visitedLink: "#B000F7",
-      displayColorPicker: false
+      visitedLink: "#B000F7"
     };
   }
 
