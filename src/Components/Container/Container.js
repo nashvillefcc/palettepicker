@@ -3,7 +3,7 @@ import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
-import ColorButton from "../ColorButton/ColorButton.js";
+import PaletteInput from "../PaletteInput/PaletteInput.js";
 import "./Container.css";
 
 class Container extends React.Component {
@@ -20,8 +20,7 @@ class Container extends React.Component {
       sidebarBg: "#D5D8DC",
       sidebarText: "#000000",
       link: "#0032FF",
-      visitedLink: "#B000F7",
-      displayColorPicker: false
+      visitedLink: "#B000F7"
     };
   }
 
@@ -43,111 +42,79 @@ class Container extends React.Component {
     } = this.state;
     const colorButtons = [
       {
-        Label: "Main background",
-        Component: (
-          <ColorButton // ColorButton is a component that handles displaying the color selection popover and handles color change
-            key="mainBgButton" // each ColorButton in this array gets mapped over, so it needs a key identifier
-            color={mainBg} // the color we are changing is passed as props to the ColorButton
-            propKey="mainBg" // this tells the updateParent method which key in state is getting its color updated
-            updateParent={this.parentHandler} // this is the handler function that sets the state in this parent Container component
-          />
-        )
+        label: "Main background", // each ColorButton has a corresponding label to be displayed in the Button panel
+        key: "mainBgButton", // each ColorButton in this array gets mapped over, so it needs a key identifier
+        color: mainBg, // the color we are changing is passed as props to the ColorButton
+        propKey: "mainBg", // this tells the updateParent method which key in state is getting its color updated // this is the handler function that sets the state in this parent Container component
       },
       {
-        Label: "Main text",
-        Component: (
-          <ColorButton
-            key="mainTextButton"
-            color={mainText}
-            propKey="mainText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Main text",
+        key: "mainTextButton",
+        color: mainText,
+        propKey: "mainText",
       },
       {
-        Label: "Navbar background",
-        Component: (
-          <ColorButton
-            key="navbarBgButton"
-            color={navbarBg}
-            propKey="navbarBg"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Navbar background",
+        key: "navbarBgButton",
+        color: navbarBg,
+        propKey: "navbarBg",
       },
       {
-        Label: "Navbar text",
-        Component: (
-          <ColorButton
-            key="navbarTextButton"
-            color={navbarText}
-            propKey="navbarText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Navbar text",
+        key: "navbarTextButton",
+        color: navbarText,
+        propKey: "navbarText",
       },
       {
-        Label: "Sidebar background",
-        Component: (
-          <ColorButton
-            key="sidebarBgButton"
-            color={sidebarBg}
-            propKey="sidebarBg"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Sidebar background",
+        key: "sidebarBgButton",
+        color: sidebarBg,
+        propKey: "sidebarBg",
       },
       {
-        Label: "Sidebar text",
-        Component: (
-          <ColorButton
-            key="sidebarTextButton"
-            color={sidebarText}
-            propKey="sidebarText"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Sidebar text",
+        key: "sidebarTextButton",
+        color: sidebarText,
+        propKey: "sidebarText",
       },
       {
-        Label: "Links",
-        Component: (
-          <ColorButton
-            key="linkButton"
-            color={link}
-            propKey="link"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Links",
+        key: "linkButton",
+        color: link,
+        propKey: "link",
       },
       {
-        Label: "Visited links",
-        Component: (
-          <ColorButton
-            key="visitedLinkButton"
-            color={visitedLink}
-            propKey="visitedLink"
-            updateParent={this.parentHandler}
-          />
-        )
+        label: "Visited links",
+        key: "visitedLinkButton",
+        color: visitedLink,
+        propKey: "visitedLink",
       }
     ];
+    // give the parentHandler method to all buttons before they are passed into ButtonPanel
+    colorButtons.map(b=>b.updateParent = this.parentHandler)
     return (
-      <div>
+      <div className="Container">
+        <h2>Color Selection buttons</h2>
         {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
         <ButtonPanel buttons={colorButtons} />
-        <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
-        <section style={{ display: "flex" }}>
-          <Sidebar
-            link={link}
-            visitedLink={visitedLink}
-            sidebarText={sidebarText}
-            sidebarBg={sidebarBg}
-          />
-          <MainContent mainContentBg={mainBg} mainContentText={mainText} />
-        </section>
-        <div style={{ textAlign: "center" }}>
+        <PaletteInput colorsToChange={["mainBg", "navbarBg", "sidebarBg", "link", "visitedLink"]} updateParent={this.parentHandler} />
+        <h2>Real-Time Preview</h2>
+        <div className="preview-window">
+          <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
+          <section>
+            <Sidebar
+              link={link}
+              visitedLink={visitedLink}
+              sidebarText={sidebarText}
+              sidebarBg={sidebarBg}
+            />
+            <MainContent mainContentBg={mainBg} mainContentText={mainText} />
+          </section>
+        </div>
+        <div className="color-code-table">
           <h2>Hex Color Codes</h2>
           <table>
+            <tbody>
             <tr>
               <th>Page Element</th>
               <th>Code</th>
@@ -184,6 +151,7 @@ class Container extends React.Component {
               <td>Visited link</td>
               <td>{visitedLink}</td>
             </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -191,4 +159,7 @@ class Container extends React.Component {
   }
 }
 
+
+
 export default Container;
+
