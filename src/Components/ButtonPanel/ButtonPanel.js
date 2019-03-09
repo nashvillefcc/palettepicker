@@ -7,7 +7,7 @@ const ButtonPanel = ({ buttons }) => {
     <div className="ButtonPanel">
       {buttons.map(b => {
         return (
-          <h3>
+          <h3 key={"h3-key-for-" + b.key}>
             <ColorButton
               key={b.key}
               color={b.color}

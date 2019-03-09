@@ -5,6 +5,10 @@
   margin-right: 5%;
 }
 
+.PaletteInput {
+  text-align: center;
+}
+
 .preview-window {
   margin: 20px;
   border: 2px solid black;

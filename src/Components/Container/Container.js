@@ -3,6 +3,7 @@ import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
+import PaletteInput from "../PaletteInput/PaletteInput.js";
 import "./Container.css";
 
 class Container extends React.Component {
@@ -96,6 +97,7 @@ class Container extends React.Component {
         <h2>Color Selection buttons</h2>
         {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
         <ButtonPanel buttons={colorButtons} />
+        <PaletteInput colorsToChange={["mainBg", "navbarBg", "sidebarBg", "link", "visitedLink"]} updateParent={this.parentHandler} />
         <h2>Real-Time Preview</h2>
         <div className="preview-window">
           <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
@@ -112,6 +114,7 @@ class Container extends React.Component {
         <div className="color-code-table">
           <h2>Hex Color Codes</h2>
           <table>
+            <tbody>
             <tr>
               <th>Page Element</th>
               <th>Code</th>
@@ -148,6 +151,7 @@ class Container extends React.Component {
               <td>Visited link</td>
               <td>{visitedLink}</td>
             </tr>
+            </tbody>
           </table>
         </div>
       </div>
