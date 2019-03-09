@@ -13,7 +13,11 @@ class PaletteInput extends React.Component {
     return (
       <div id="coolors-instruction">
         Get a pre-generated palette from{" "}
-        <a href="https://coolors.co/app" target="_blank">
+        <a
+          href="https://coolors.co/app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Coolors.co
         </a>
         <br />
@@ -39,8 +43,7 @@ class PaletteInput extends React.Component {
     let hexArray = fullString.replace("https://coolors.co/", "").split("-"); // get rid of address part of URL & split the hex codes from the url string into an array
     this.props.colorsToChange.map((c, i) => {
       // map over every color (c) and assign it to the color code at the index (i) in the hexArray
-      let hashedHex = "#" + hexArray[i];
-      return this.props.updateParent(hashedHex, c);
+      return this.props.updateParent("#" + hexArray[i], c);
     });
   };
   handleChange = e => {
