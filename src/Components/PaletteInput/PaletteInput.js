@@ -36,9 +36,7 @@ class PaletteInput extends React.Component {
   paletteSwap = e => {
     e.preventDefault();
     let fullString = this.state.value;
-    let hexArray = fullString
-      .slice(fullString.lastIndexOf(/\//) + 1)
-      .split("-"); // get rid of address part of URL & split the hex codes from the url string into an array
+    let hexArray = fullString.replace("https://coolors.co/", "").split("-"); // get rid of address part of URL & split the hex codes from the url string into an array
     this.props.colorsToChange.map((c, i) => {
       // map over every color (c) and assign it to the color code at the index (i) in the hexArray
       let hashedHex = "#" + hexArray[i];
