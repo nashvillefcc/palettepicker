@@ -45,6 +45,7 @@ class PaletteInput extends React.Component {
       // map over every color (c) and assign it to the color code at the index (i) in the hexArray
       return this.props.updateParent("#" + hexArray[i], c);
     });
+    document.getElementById("paletteSubmitForm").reset();
   };
   handleChange = e => {
     this.setState({ value: e.target.value });
