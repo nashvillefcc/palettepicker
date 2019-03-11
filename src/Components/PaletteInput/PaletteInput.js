@@ -12,27 +12,34 @@ class PaletteInput extends React.Component {
   render() {
     return (
       <div id="coolors-instruction">
-        Get a pre-generated palette from{" "}
-        <a
-          href="https://coolors.co/app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Coolors.co
-        </a>
-        <br />
-        Copy the entire url string from the browser's address bar
-        <br />
         <form id="paletteSubmitForm" onSubmit={this.paletteSwap}>
-          Paste the entire URL string here:{" "}
-          <input type="text" onChange={this.handleChange} />
-          <br />
-          <input
-            type="submit"
-            className="btn btn-primary"
-            value="Click to Apply Changes"
-          />
+          <div className="card" id="palette-input-card">
+            <div className="card-body">
+              Get a pre-generated palette from{" "}
+              <a
+                href="https://coolors.co/app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Coolors.co
+              </a>
+              <br />
+              Copy the entire url string from the browser's address bar
+              <br />
+              Paste the entire URL string here:{" "}
+              <input type="text" onChange={this.handleChange} />
+              <br />
+            </div>
+            <div className="card-footer">
+              <input
+                type="submit"
+                className="btn btn-primary"
+                value="Click to Apply Changes"
+              />
+            </div>
+          </div>
         </form>
+
         <br />
       </div>
     );

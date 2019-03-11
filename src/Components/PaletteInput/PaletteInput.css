@@ -1,3 +1,7 @@
 #coolors-instruction {
   text-align: center;
 }
+
+#palette-input-card {
+  display: inline-block;
+}
