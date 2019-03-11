@@ -1,5 +1,5 @@
 import React from "react";
-import ColorButton from "../ColorButton/ColorButton"
+import ColorButton from "../ColorButton/ColorButton";
 import "./ButtonPanel.css";
 
 const ButtonPanel = ({ buttons }) => {
@@ -7,7 +7,7 @@ const ButtonPanel = ({ buttons }) => {
     <div className="ButtonPanel">
       {buttons.map(b => {
         return (
-          <h3 key={"h3-key-for-" + b.key}>
+          <h5 key={"h5-key-for-" + b.key}>
             <ColorButton
               key={b.key}
               color={b.color}
@@ -15,7 +15,7 @@ const ButtonPanel = ({ buttons }) => {
               updateParent={b.updateParent}
             />{" "}
             {b.label}
-          </h3>
+          </h5>
         );
       })}
     </div>

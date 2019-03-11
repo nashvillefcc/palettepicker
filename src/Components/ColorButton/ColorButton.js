@@ -6,7 +6,7 @@ class ColorButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayColorPicker: false,
+      displayColorPicker: false
     };
   }
 
@@ -19,15 +19,15 @@ class ColorButton extends React.Component {
   };
 
   handleChange = color => {
-    this.props.updateParent(color.hex, this.props.propKey)
+    this.props.updateParent(color.hex, this.props.propKey);
   };
 
   render() {
     const styles = reactCSS({
       default: {
         color: {
-          width: "50px",
-          height: "50px",
+          width: "25px",
+          height: "25px",
           border: "solid black",
           borderRadius: "2px",
           background: `${this.props.color}`
