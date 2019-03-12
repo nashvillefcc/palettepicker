@@ -1,15 +1,11 @@
 .ButtonPanel {
-  display: flexbox;
-  vertical-align: middle;
-  justify-content: flex-start;
-  background-color: white;
+  display: inline-flex;
+  text-align: center;
+  align-items: stretch;
 }
 
-div {
-  vertical-align: middle;
-}
-
-h5 {
-  display: inline-block;
-  margin: 10px;
+.color-button-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

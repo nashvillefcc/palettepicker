@@ -1,5 +1,6 @@
 import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
+import PaletteInput from "../PaletteInput/PaletteInput";
 import "./ButtonPanel.css";
 
 const ButtonPanel = ({ buttons }) => {
@@ -7,17 +8,30 @@ const ButtonPanel = ({ buttons }) => {
     <div className="ButtonPanel">
       {buttons.map(b => {
         return (
-          <h5 key={"h5-key-for-" + b.key}>
-            <ColorButton
-              key={b.key}
-              color={b.color}
-              propKey={b.propKey}
-              updateParent={b.updateParent}
-            />{" "}
-            {b.label}
-          </h5>
+          <div className="card" key={"card-for-" + b.key}>
+            <div className="card-header">{b.label}</div>
+            <div className="card-body color-button-card">
+              <ColorButton
+                key={b.key}
+                color={b.color}
+                propKey={b.propKey}
+                updateParent={b.updateParent}
+              />
+            </div>
+            <div className="card-footer">{b.color}</div>
+          </div>
         );
       })}
+      <PaletteInput
+        colorsToChange={[
+          "mainBg",
+          "navbarBg",
+          "sidebarBg",
+          "link",
+          "visitedLink"
+        ]}
+        updateParent={buttons[0].updateParent}
+      />
     </div>
   );
 };

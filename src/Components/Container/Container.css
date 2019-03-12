@@ -1,12 +1,11 @@
 .ButtonPanel {
   border: 2px solid black;
-  width: auto;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
-.PaletteInput {
-  text-align: center;
+#button-panel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview-window {
@@ -14,10 +13,6 @@
   border: 2px solid black;
   margin-left: 10%;
   margin-right: 10%;
-}
-
-.color-code-table {
-  text-align: center;
 }
 
 h2 {
