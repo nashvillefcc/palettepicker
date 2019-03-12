@@ -18,7 +18,7 @@ const ButtonPanel = ({ buttons }) => {
                 updateParent={b.updateParent}
               />
             </div>
-            <div className="card-footer">{b.color}</div>
+            <div className="card-footer">Hex: {b.color}</div>
           </div>
         );
       })}

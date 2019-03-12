@@ -26,8 +26,8 @@ class ColorButton extends React.Component {
     const styles = reactCSS({
       default: {
         color: {
-          width: "25px",
-          height: "25px",
+          width: "50px",
+          height: "50px",
           border: "solid black",
           borderRadius: "2px",
           background: `${this.props.color}`
