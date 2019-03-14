@@ -3,6 +3,7 @@ import ButtonPanel from "../ButtonPanel/ButtonPanel.js";
 import Navbar from "../Navbar/Navbar.js";
 import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
+import NavHeader from "../NavHeader/NavHeader.js";
 import "./Container.css";
 
 class Container extends React.Component {
@@ -93,6 +94,7 @@ class Container extends React.Component {
     colorButtons.map(b => (b.updateParent = this.parentHandler));
     return (
       <div className="Container">
+        <NavHeader />
         <h2>Color Selection buttons</h2>
         <div id="button-panel-container">
           {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
