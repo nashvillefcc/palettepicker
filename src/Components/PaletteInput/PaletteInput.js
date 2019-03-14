@@ -40,13 +40,15 @@ class PaletteInput extends React.Component {
   }
   paletteSwap = e => {
     e.preventDefault();
-    let fullString = this.state.value;
-    let hexArray = fullString.replace("https://coolors.co/", "").split("-"); // get rid of address part of URL & split the hex codes from the url string into an array
-    this.props.colorsToChange.map((c, i) => {
-      // map over every color (c) and assign it to the color code at the index (i) in the hexArray
-      return this.props.updateParent("#" + hexArray[i], c);
-    });
-    document.getElementById("paletteSubmitForm").reset();
+    if (this.state.value !== "") {
+      let fullString = this.state.value;
+      let hexArray = fullString.replace("https://coolors.co/", "").split("-"); // get rid of address part of URL & split the hex codes from the url string into an array
+      this.props.colorsToChange.map((c, i) => {
+        // map over every color (c) and assign it to the color code at the index (i) in the hexArray
+        return this.props.updateParent("#" + hexArray[i], c);
+      });
+      document.getElementById("paletteSubmitForm").reset();
+    }
   };
   handleChange = e => {
     this.setState({ value: e.target.value });

@@ -1,11 +1,8 @@
 .ButtonPanel {
-  display: inline-flex;
   text-align: center;
-  align-items: stretch;
 }
 
 .color-button-card {
-  display: flex;
   align-items: center;
   justify-content: center;
 }

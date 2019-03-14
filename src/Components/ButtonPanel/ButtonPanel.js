@@ -5,7 +5,7 @@ import "./ButtonPanel.css";
 
 const ButtonPanel = ({ buttons }) => {
   return (
-    <div className="ButtonPanel">
+    <div className="ButtonPanel d-inline-flex container-fluid justify-content-center flex-wrap">
       {buttons.map(b => {
         return (
           <div className="card" key={"card-for-" + b.key}>
