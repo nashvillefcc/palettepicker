@@ -66,7 +66,7 @@ const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
           Link 4
         </button>
       </div>
-      <p style={{margin: "50px"}}>
+      <p style={{color: sidebarText, margin: "50px"}}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus urna
         massa, ultrices vitae risus sed, sodales auctor ex. Nulla fermentum
         condimentum nunc, vel dictum urna maximus vel. Duis et fringilla tellus.
