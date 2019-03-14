@@ -1,12 +1,13 @@
 .ButtonPanel {
+  width: 90vw;
   border: 2px solid black;
-  width: auto;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90vw;
 }
 
-.PaletteInput {
-  text-align: center;
+#button-panel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview-window {
@@ -16,10 +17,6 @@
   margin-right: 10%;
 }
 
-.color-code-table {
-  text-align: center;
-}
-
 h2 {
   text-align: center;
 }
@@ -27,19 +24,4 @@ h2 {
 section {
   display: flex;
   width: auto;
-}
-
-table {
-  display: inline-block;
-  text-align: center;
-  table-layout: auto;
-  width: 30%;
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-
-th,
-td {
-  width: 100%;
-  border: 1px solid black;
 }

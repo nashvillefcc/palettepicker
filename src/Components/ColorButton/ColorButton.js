@@ -6,7 +6,7 @@ class ColorButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayColorPicker: false,
+      displayColorPicker: false
     };
   }
 
@@ -19,7 +19,7 @@ class ColorButton extends React.Component {
   };
 
   handleChange = color => {
-    this.props.updateParent(color.hex, this.props.propKey)
+    this.props.updateParent(color.hex, this.props.propKey);
   };
 
   render() {
