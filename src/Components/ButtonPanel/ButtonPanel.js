@@ -1,6 +1,5 @@
 import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
-import PaletteInput from "../PaletteInput/PaletteInput";
 import "./ButtonPanel.css";
 
 const ButtonPanel = ({ buttons }) => {
@@ -22,16 +21,6 @@ const ButtonPanel = ({ buttons }) => {
           </div>
         );
       })}
-      <PaletteInput
-        colorsToChange={[
-          "mainBg",
-          "navbarBg",
-          "sidebarBg",
-          "link",
-          "visitedLink"
-        ]}
-        updateParent={buttons[0].updateParent}
-      />
     </div>
   );
 };

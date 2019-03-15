@@ -1,4 +1,5 @@
 import React from "react";
+import "./PaletteInput.css";
 
 class PaletteInput extends React.Component {
   constructor(props) {
@@ -10,31 +11,33 @@ class PaletteInput extends React.Component {
 
   render() {
     return (
-      <div className="card">
-        <form id="paletteSubmitForm" onSubmit={this.paletteSwap}>
-          <div className="card-body">
-            Get a pre-generated palette from{" "}
-            <a
-              href="https://coolors.co/app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Coolors.co
-            </a>
-            <br />
-            Copy the entire url string from the browser's address bar
-            <br />
-            Paste the entire URL string here: <br />
-            <input type="text" onChange={this.handleChange} />
-          </div>
-          <div className="card-footer">
-            <input
-              type="submit"
-              className="btn btn-primary"
-              value="Click to Apply Changes"
-            />
-          </div>
-        </form>
+      <div className="palette-input-container d-flex justify-content-center">
+        <div className="card">
+          <form id="paletteSubmitForm" onSubmit={this.paletteSwap}>
+            <div className="card-body">
+              Get a pre-generated palette from{" "}
+              <a
+                href="https://coolors.co/app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Coolors.co
+              </a>
+              <br />
+              Copy the entire url string from the browser's address bar
+              <br />
+              Paste the entire URL string here: <br />
+              <input type="text" onChange={this.handleChange} />
+            </div>
+            <div className="card-footer">
+              <input
+                type="submit"
+                className="btn btn-primary"
+                value="Click to Apply Changes"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

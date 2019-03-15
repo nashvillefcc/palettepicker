@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
 import NavHeader from "../NavHeader/NavHeader.js";
 import "./Container.css";
+import PaletteInput from "../PaletteInput/PaletteInput.js";
 
 class Container extends React.Component {
   constructor(props) {
@@ -98,6 +99,16 @@ class Container extends React.Component {
         <h2>Color Selection buttons</h2>
         {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
         <ButtonPanel buttons={colorButtons} />
+        <PaletteInput
+          colorsToChange={[
+            "mainBg",
+            "navbarBg",
+            "sidebarBg",
+            "link",
+            "visitedLink"
+          ]}
+          updateParent={this.parentHandler}
+        />
         <h2>Real-Time Preview</h2>
         <div className="preview-window">
           <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />
