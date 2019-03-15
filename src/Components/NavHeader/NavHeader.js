@@ -12,7 +12,7 @@ const NavHeader = () => {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <button className="nav-link" onClick={doAlert}>
-              Sign In/Sign Up
+              Sign In / Sign Up
             </button>
           </li>
         </ul>
