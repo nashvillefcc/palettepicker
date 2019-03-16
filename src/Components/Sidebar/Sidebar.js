@@ -1,72 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Sidebar.css";
+import Link from "../Link/Link";
 
 const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
   return (
     <nav className="Sidebar" style={{ backgroundColor: sidebarBg }}>
-      <p style={{ color: sidebarText }}>Check out these links</p>
+      <p style={{ color: sidebarText }}>
+        Click links to see visited/unvisited color
+      </p>
       <div>
-        <button
-          style={{
-            color: visitedLink,
-            background: "none",
-            border: "none",
-            margin: "5px"
-          }}
-        >
-          Visited Link
-        </button>
+        <Link link={link} visitedLink={visitedLink} />
       </div>
       <div>
-        <button
-          style={{
-            color: link,
-            background: "none",
-            border: "none",
-            margin: "5px"
-          }}
-        >
-          Link 1
-        </button>
+        <Link link={link} visitedLink={visitedLink} />
       </div>
       <div>
-        <button
-          style={{
-            color: link,
-            background: "none",
-            border: "none",
-            margin: "5px"
-          }}
-        >
-          Link 2
-        </button>
+        <Link link={link} visitedLink={visitedLink} />
       </div>
       <div>
-        <button
-          style={{
-            color: link,
-            background: "none",
-            border: "none",
-            margin: "5px"
-          }}
-        >
-          Link 3
-        </button>
+        <Link link={link} visitedLink={visitedLink} />
       </div>
-      <div>
-        <button
-          style={{
-            color: link,
-            background: "none",
-            border: "none",
-            margin: "5px"
-          }}
-        >
-          Link 4
-        </button>
-      </div>
-      <p style={{color: sidebarText, margin: "50px"}}>
+      <p style={{ color: sidebarText, margin: "50px" }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus urna
         massa, ultrices vitae risus sed, sodales auctor ex. Nulla fermentum
         condimentum nunc, vel dictum urna maximus vel. Duis et fringilla tellus.
@@ -78,7 +33,6 @@ const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
     </nav>
   );
 };
-
 Sidebar.propTypes = {
   link: PropTypes.string.isRequired,
   visitedLink: PropTypes.string.isRequired,

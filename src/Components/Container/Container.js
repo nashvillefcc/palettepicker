@@ -14,12 +14,12 @@ class Container extends React.Component {
       // Managing state from this top-level container seems like
       // the easiest way to have the color buttons communicate
       // with their respective elements in the preview pane
-      mainBg: "#FFFFFF",
-      mainText: "#000000",
+      mainBg: "#f5f5f5",
+      mainText: "#252525",
       navbarBg: "#909497",
-      navbarText: "#000000",
+      navbarText: "#252525",
       sidebarBg: "#D5D8DC",
-      sidebarText: "#000000",
+      sidebarText: "#252525",
       link: "#0032FF",
       visitedLink: "#B000F7"
     };
