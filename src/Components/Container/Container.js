@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar.js";
 import MainContent from "../MainContent/MainContent.js";
 import NavHeader from "../NavHeader/NavHeader.js";
 import "./Container.css";
+import PaletteInput from "../PaletteInput/PaletteInput.js";
 
 class Container extends React.Component {
   constructor(props) {
@@ -13,12 +14,12 @@ class Container extends React.Component {
       // Managing state from this top-level container seems like
       // the easiest way to have the color buttons communicate
       // with their respective elements in the preview pane
-      mainBg: "#FFFFFF",
-      mainText: "#000000",
+      mainBg: "#f5f5f5",
+      mainText: "#252525",
       navbarBg: "#909497",
-      navbarText: "#000000",
+      navbarText: "#252525",
       sidebarBg: "#D5D8DC",
-      sidebarText: "#000000",
+      sidebarText: "#252525",
       link: "#0032FF",
       visitedLink: "#B000F7"
     };
@@ -96,10 +97,18 @@ class Container extends React.Component {
       <div className="Container">
         <NavHeader />
         <h2>Color Selection buttons</h2>
-        <div id="button-panel-container">
-          {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
-          <ButtonPanel buttons={colorButtons} />
-        </div>
+        {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
+        <ButtonPanel buttons={colorButtons} />
+        <PaletteInput
+          colorsToChange={[
+            "mainBg",
+            "navbarBg",
+            "sidebarBg",
+            "link",
+            "visitedLink"
+          ]}
+          updateParent={this.parentHandler}
+        />
         <h2>Real-Time Preview</h2>
         <div className="preview-window">
           <Navbar navbarContentBg={navbarBg} navbarContentText={navbarText} />

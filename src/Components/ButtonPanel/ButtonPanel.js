@@ -1,11 +1,10 @@
 import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
-import PaletteInput from "../PaletteInput/PaletteInput";
 import "./ButtonPanel.css";
 
 const ButtonPanel = ({ buttons }) => {
   return (
-    <div className="ButtonPanel">
+    <div className="ButtonPanel container-fluid d-inline-flex justify-content-center flex-wrap">
       {buttons.map(b => {
         return (
           <div className="card" key={"card-for-" + b.key}>
@@ -22,16 +21,6 @@ const ButtonPanel = ({ buttons }) => {
           </div>
         );
       })}
-      <PaletteInput
-        colorsToChange={[
-          "mainBg",
-          "navbarBg",
-          "sidebarBg",
-          "link",
-          "visitedLink"
-        ]}
-        updateParent={buttons[0].updateParent}
-      />
     </div>
   );
 };
