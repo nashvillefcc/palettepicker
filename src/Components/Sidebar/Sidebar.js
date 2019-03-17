@@ -6,9 +6,9 @@ import Link from "../Link/Link";
 const Sidebar = ({ link, visitedLink, sidebarText, sidebarBg }) => {
   return (
     <nav className="Sidebar" style={{ backgroundColor: sidebarBg }}>
-      <p style={{ color: sidebarText }}>
+      <h5 style={{ color: sidebarText }}>
         Click links to see visited/unvisited color
-      </p>
+      </h5>
       <div>
         <Link link={link} visitedLink={visitedLink} />
       </div>
