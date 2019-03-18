@@ -17,8 +17,7 @@ class Link extends React.Component {
         }}
         onClick={this.toggleClick}
       >
-        {" "}
-        Visited Link{" "}
+        Visited Link
       </button>
     ) : (
       <button

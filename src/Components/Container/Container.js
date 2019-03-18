@@ -10,10 +10,10 @@ import PaletteInput from "../PaletteInput/PaletteInput.js";
 class Container extends React.Component {
   constructor(props) {
     super(props);
+    // Managing state from this top-level container seems like
+    // the easiest way to have the color buttons communicate
+    // with their respective elements in the preview pane
     this.state = {
-      // Managing state from this top-level container seems like
-      // the easiest way to have the color buttons communicate
-      // with their respective elements in the preview pane
       mainBg: "#f5f5f5",
       mainText: "#252525",
       navbarBg: "#909497",
@@ -91,14 +91,15 @@ class Container extends React.Component {
         propKey: "visitedLink"
       }
     ];
-    // give the parentHandler method to all buttons before they are passed into ButtonPanel
-    colorButtons.map(b => (b.updateParent = this.parentHandler));
+
+    colorButtons.map(b => (b.updateParent = this.parentHandler)); // give the parentHandler method to all buttons before they are passed into ButtonPanel
+
     return (
       <div className="Container">
         <NavHeader />
         <h2>Color Selection buttons</h2>
-        {/* ButtonPanel is a parent component that maps over an array of buttons and renders them inline into a row */}
         <ButtonPanel buttons={colorButtons} />
+        {/* ButtonPanel is a parent component that maps over the array of buttons and renders them in a flexbox */}
         <PaletteInput
           colorsToChange={[
             "mainBg",
