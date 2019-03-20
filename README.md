@@ -15,3 +15,9 @@ Once the packages have finished installing, run
 from the root directory.
 
 This will start the app.
+
+## TODO:
+
+- Going forward, I would like to add sign-up/login functionality, as well as the ability for a user to save their selected colors
+
+- I would like to make the preview pane modular/customizable. Either give the user the option to look at 3 or 4 different preview layouts (including mobile), or the ability to customize the preview layout by adding/removing, resizing, and moving elements
