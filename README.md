@@ -16,7 +16,9 @@ from the root directory.
 
 This will start the app.
 
-## TODO:
+## TODO / Phase 2:
+
+- Implement Material-UI to make it look snazzy
 
 - Going forward, I would like to add sign-up/login functionality, as well as the ability for a user to save their selected colors
 
